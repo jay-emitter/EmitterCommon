@@ -13,6 +13,7 @@ public class AuthResp {
 	public String getToken() {
 		return token;
 	}
+	
 	/**
 	 * @param token the token to set
 	 */
@@ -22,5 +23,17 @@ public class AuthResp {
 	/**
 	 * @return the userKey
 	 */
+	public boolean isFail() {
+		return fail;
+	}
+	public void setFail(boolean fail) {
+		this.fail = fail;
+	}
+	public String getFailReason() {
+		return failReason;
+	}
+	public void setFailReason(String failReason) {
+		this.failReason = failReason;
+	}
 	
 }

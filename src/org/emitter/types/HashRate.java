@@ -10,6 +10,8 @@ public class HashRate
 	}
 	
 	private float rate;
+	private float acceptedRate;
+	private boolean accepted;
 	private Unit unit;
 	private Timestamp time;
 	public HashRate()
@@ -68,5 +70,21 @@ public class HashRate
 	 */
 	public void setTime(Timestamp time) {
 		this.time = time;
+	}
+
+	public float getAcceptedRate() {
+		return acceptedRate;
+	}
+
+	public void setAcceptedRate(float acceptedRate) {
+		this.acceptedRate = acceptedRate;
+	}
+
+	public boolean isAccepted() {
+		return accepted;
+	}
+
+	public void setAccepted(boolean accepted) {
+		this.accepted = accepted;
 	}
 }

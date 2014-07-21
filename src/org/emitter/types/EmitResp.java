@@ -1,8 +1,7 @@
 package org.emitter.types;
 
-import java.io.Serializable;
 
-public class EmitResp implements Serializable{
+public class EmitResp{
 	public enum Status
 	{
 		ACCEPTED
@@ -10,23 +9,28 @@ public class EmitResp implements Serializable{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -1729986470856026861L;
 	private Location location;
-	private Message message;
+	private Message[] message;
 	private Status status;
+	
+	
+	/**
+	 * 
+	 */
+	public EmitResp() {
+		super();
+	}
+	
 	/**
 	 * @param location
-	 * @param menuId
 	 * @param message
 	 */
 	public EmitResp(Location location, Message message) {
 		super();
 		this.location = location;
-		this.message = message;
+		this.message = new Message[] { message};
 	}
 
-	
-	
 	/**
 	 * @return the location
 	 */
@@ -45,20 +49,18 @@ public class EmitResp implements Serializable{
 	/**
 	 * @return the message
 	 */
-	public Message getMessage() {
+	public Message[] getMessage() {
 		return message;
 	}
 
 	/**
 	 * @param message the message to set
 	 */
-	public void setMessage(Message message) {
+	public void setMessage(Message[] message) {
 		this.message = message;
 	}
 
-	public EmitResp() {
-		super();
-	}
+	
 
 	/**
 	 * @return the status

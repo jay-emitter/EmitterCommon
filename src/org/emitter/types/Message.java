@@ -1,14 +1,8 @@
 package org.emitter.types;
 
-import java.io.Serializable;
 
-public class Message implements Serializable
+public class Message
 {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -5248403681496902931L;
 	public Message()
 	{
 		super();
@@ -17,11 +11,19 @@ public class Message implements Serializable
 	 * @param text
 	 * @param title
 	 */
-	public Message(String text, String title, String id) {
+	public Message(String text, String title, int id) {
 		super();
 		this.text = text;
 		this.title = title;
 		this.msgId = id;
+	}
+	
+	/**
+	 * @param text
+	 * @param title
+	 */
+	public Message(String text, String title) {
+		this(text,title,-1);
 	}
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
@@ -85,16 +87,16 @@ public class Message implements Serializable
 	/**
 	 * @return the msgId
 	 */
-	public String getMsgId() {
+	public int getMsgId() {
 		return msgId;
 	}
 	/**
 	 * @param msgId the msgId to set
 	 */
-	public void setMsgId(String msgId) {
+	public void setMsgId(int msgId) {
 		this.msgId = msgId;
 	}
 	private String text;
 	private String title;
-	private String msgId;
+	private int msgId;
 }
