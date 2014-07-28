@@ -1,12 +1,6 @@
 package org.emitter.types;
 
-import java.io.Serializable;
-
-public class MenuId implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -7276782999462122978L;
+public class MenuId {
 	private int menuId;
 	public MenuId() {
 		// TODO Auto-generated constructor stub

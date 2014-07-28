@@ -13,7 +13,8 @@ import com.google.gson.reflect.TypeToken;
  * @author Jeremy
  *
  */
-public class JsonUtil {
+public class JsonUtil 
+{
 	static GsonBuilder g = null;
 	static Gson gson = null;
 	private static synchronized void build()
@@ -26,7 +27,6 @@ public class JsonUtil {
 			}
 			gson = g.create();
 		}
-
 	}
 	
 	private static Gson get()

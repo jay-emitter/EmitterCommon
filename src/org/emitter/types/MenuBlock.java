@@ -1,15 +1,11 @@
 package org.emitter.types;
 
-import java.io.Serializable;
 import java.util.Arrays;
 
-public class MenuBlock implements Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -6908181413724316003L;
-
+public class MenuBlock  {
+	private String header;
+	private MenuItem items[];
+	private MenuBlock subBlocks[];
 	public MenuBlock() {
 		super();
 	}
@@ -104,8 +100,4 @@ public class MenuBlock implements Serializable {
 		this.subBlocks = subBlocks;
 	}
 
-
-	String header;
-	MenuItem items[];
-	MenuBlock subBlocks[];
 }

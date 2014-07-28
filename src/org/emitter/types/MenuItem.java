@@ -3,20 +3,16 @@
  */
 package org.emitter.types;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * @author jeremy
  *
  */
-public class MenuItem implements Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -3668270693759526585L;
-
+public class MenuItem  {
+	private String name;
+	private BigDecimal price;
+	private boolean allowCusomization;
 	/**
 	 * 
 	 */
@@ -113,8 +109,6 @@ public class MenuItem implements Serializable {
 		this.allowCusomization = allowCusomization;
 	}
 
-	String name;
-	BigDecimal price;
-	boolean allowCusomization;
+	
 	
 }

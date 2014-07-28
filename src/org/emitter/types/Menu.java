@@ -3,14 +3,14 @@
  */
 package org.emitter.types;
 
-import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * @author jeremy
  *
  */
-public class Menu implements Serializable {
+public class Menu 
+{
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
@@ -67,11 +67,7 @@ public class Menu implements Serializable {
 	public void setId(MenuId id) {
 		this.id = id;
 	}
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -5892123109709032299L;
-
+	
 	/**
 	 * 
 	 */

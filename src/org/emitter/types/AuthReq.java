@@ -1,9 +1,11 @@
 package org.emitter.types;
 
-public class AuthReq {
+public class AuthReq 
+{
 	private String username, password;
-	public AuthReq() {
-		// TODO Auto-generated constructor stub
+	public AuthReq() 
+	{
+		
 	}
 	/**
 	 * @return the username

@@ -1,7 +1,7 @@
 package org.emitter.types;
 
-public class AppData {
-
+public class AppData 
+{
 	private String appKey;
 	private String appName;
 	public AppData() {

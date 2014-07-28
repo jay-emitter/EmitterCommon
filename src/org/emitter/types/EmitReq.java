@@ -10,6 +10,9 @@ public class EmitReq {
 	private GPSCoord gps;
 	private Timestamp time;
 	
+	/**
+	 * 
+	 */
 	public EmitReq() {
 		super();
 		this.setTime(new Timestamp());

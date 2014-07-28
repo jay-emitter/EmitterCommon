@@ -3,19 +3,11 @@
  */
 package org.emitter.types;
 
-import java.io.Serializable;
-
 /**
  * @author jeremy
  *
  */
-public class Source implements Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 2157021743141897518L;
-
+public class Source {
 	/**
 	 * 
 	 */
