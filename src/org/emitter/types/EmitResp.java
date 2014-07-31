@@ -9,6 +9,7 @@ public class EmitResp{
 	/**
 	 * 
 	 */
+	private String token;
 	private Location location;
 	private Message[] message;
 	private Status status;
@@ -74,5 +75,13 @@ public class EmitResp{
 	 */
 	public void setStatus(Status status) {
 		this.status = status;
+	}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
 	}
 }

@@ -3,6 +3,12 @@ package org.emitter.types;
 public class AuthReq 
 {
 	private String username, password;
+	
+	public AuthReq(String user, String pass) 
+	{
+		username = user;
+		password = pass;
+	}
 	public AuthReq() 
 	{
 		

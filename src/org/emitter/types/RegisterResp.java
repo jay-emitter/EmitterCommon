@@ -2,10 +2,9 @@ package org.emitter.types;
 
 public class RegisterResp {
 	boolean Success;
-	private String userKey;
-	private String deviceKey;
-	private String appKey;
+	private Source source;
 	private String failReson;
+	private String token;
 	/**
 	 * @return the success
 	 */
@@ -17,42 +16,6 @@ public class RegisterResp {
 	 */
 	public void setSuccess(boolean success) {
 		Success = success;
-	}
-	/**
-	 * @return the userKey
-	 */
-	public String getUserKey() {
-		return userKey;
-	}
-	/**
-	 * @param userKey the userKey to set
-	 */
-	public void setUserKey(String userKey) {
-		this.userKey = userKey;
-	}
-	/**
-	 * @return the deviceKey
-	 */
-	public String getDeviceKey() {
-		return deviceKey;
-	}
-	/**
-	 * @param deviceKey the deviceKey to set
-	 */
-	public void setDeviceKey(String deviceKey) {
-		this.deviceKey = deviceKey;
-	}
-	/**
-	 * @return the appKey
-	 */
-	public String getAppKey() {
-		return appKey;
-	}
-	/**
-	 * @param appKey the appKey to set
-	 */
-	public void setAppKey(String appKey) {
-		this.appKey = appKey;
 	}
 	/**
 	 * @return the failReson
@@ -68,6 +31,30 @@ public class RegisterResp {
 	}
 	public RegisterResp() {
 		// TODO Auto-generated constructor stub
+	}
+	/**
+	 * @return the token
+	 */
+	public String getToken() {
+		return token;
+	}
+	/**
+	 * @param token the token to set
+	 */
+	public void setToken(String token) {
+		this.token = token;
+	}
+	/**
+	 * @return the source
+	 */
+	public Source getSource() {
+		return source;
+	}
+	/**
+	 * @param source the source to set
+	 */
+	public void setSource(Source source) {
+		this.source = source;
 	}
 
 }

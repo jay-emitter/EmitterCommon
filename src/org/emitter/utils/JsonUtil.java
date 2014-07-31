@@ -4,6 +4,8 @@ import java.io.Reader;
 import java.io.Writer;
 import java.lang.reflect.Type;
 
+import org.emitter.error.EmitterException;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -36,33 +38,55 @@ public class JsonUtil
 		return gson;
 	}
 	
-	public static <T> void to(T ob, Writer w)
+	public static <T> void to(T ob, Writer w) throws EmitterException
 	{
-		Type t = new TypeToken<T>() {}.getType();
-		get().toJson(ob, t, w);
+		try
+		{
+			Type t = new TypeToken<T>() {}.getType();
+			get().toJson(ob, t, w);
+		}
+		catch(Exception ex)
+		{
+			throw new EmitterException("Could not write object to json", ex);
+		}
 	}
 
 	
-	public static <T> String to(T ob)
+	public static <T> String to(T ob) throws EmitterException
 	{
-		Type t = new TypeToken<T>() {}.getType();
-		return get().toJson(ob, t);
+		try
+		{
+			Type t = new TypeToken<T>() {}.getType();
+			return get().toJson(ob, t);
+		}catch(Exception ex)
+		{
+			throw new EmitterException("Could not convert object to Json", ex);
+		}
 	}
 	
-	public static String to(Object ob, Type t)
+	public static <T> T from(String j) throws EmitterException
 	{
-		return get().toJson(ob, t);
-	}
-	
-	public static <T> T from(String j)
-	{
-		return get().fromJson(j,new TypeToken<T>() {}.getType());
+		try
+		{
+			return get().fromJson(j,new TypeToken<T>() {}.getType());
+		}
+		catch(Exception ex)
+		{
+			throw new EmitterException("Could not convert json to Object. String was: " + j, ex);
+		}
 	}
 
-	public static <T> T from(Reader r)
+	public static <T> T from(Reader r) throws EmitterException
 	{
-		Type classOfT = null;
-		return get().fromJson(r, classOfT);
+		try
+		{
+			Type t = new TypeToken<T>() {}.getType();
+			return get().fromJson(r,t);
+		}
+		catch(Exception ex)
+		{
+			throw new EmitterException("Could read json to object", ex);
+		}
 	}
 	
 	
