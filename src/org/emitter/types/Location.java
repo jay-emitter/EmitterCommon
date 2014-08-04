@@ -1,48 +1,65 @@
 package org.emitter.types;
 
-public class Location 
+public class Location
 {
-	private String name;
-	private String locId;
-	private int MenuId;
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
+	private String	locId;
+	private int		MenuId;
+	private String	name;
+
+	public Location()
+	{
+
 	}
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-	/**
-	 * @return the menuId
-	 */
-	public int getMenuId() {
-		return MenuId;
-	}
-	/**
-	 * @param menuId the menuId to set
-	 */
-	public void setMenuId(int menuId) {
-		MenuId = menuId;
-	}
-	public Location() {
-		
-	}
+
 	/**
 	 * @return the locId
 	 */
-	public String getLocId() {
+	public String getLocId()
+	{
 		return locId;
 	}
+
 	/**
-	 * @param locId the locId to set
+	 * @return the menuId
 	 */
-	public void setLocId(String locId) {
+	public int getMenuId()
+	{
+		return MenuId;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName()
+	{
+		return name;
+	}
+
+	/**
+	 * @param locId
+	 *            the locId to set
+	 */
+	public void setLocId(String locId)
+	{
 		this.locId = locId;
+	}
+
+	/**
+	 * @param menuId
+	 *            the menuId to set
+	 */
+	public void setMenuId(int menuId)
+	{
+		MenuId = menuId;
+	}
+
+	/**
+	 * @param name
+	 *            the name to set
+	 */
+	public void setName(String name)
+	{
+		this.name = name;
 	}
 
 }

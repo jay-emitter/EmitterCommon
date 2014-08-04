@@ -1,17 +1,18 @@
 package org.emitter.types;
 
-public class WifiSignal implements Comparable<WifiSignal>{
-	private WifiId id;
-	private int leveldBm;
-	private int freqMhz;
+public class WifiSignal implements Comparable<WifiSignal>
+{
+	private int		freqMhz;
+	private WifiId	id;
+	private int		leveldBm;
+
 	/**
 	 * 
 	 */
-	public WifiSignal() 
+	public WifiSignal()
 	{
-	
+
 	}
-	
 
 	/**
 	 * @param bSSID
@@ -19,61 +20,68 @@ public class WifiSignal implements Comparable<WifiSignal>{
 	 * @param leveldBm
 	 * @param freqMhz
 	 */
-	public WifiSignal(String bSSID, String sSID, int leveldBm, int freqMhz) {
+	public WifiSignal(String bSSID, String sSID, int leveldBm, int freqMhz)
+	{
 		super();
-		this. id = new WifiId(bSSID, sSID);
+		this.id = new WifiId(bSSID, sSID);
 		this.leveldBm = leveldBm;
 		this.freqMhz = freqMhz;
 	}
-	
+
+	@Override
+	public int compareTo(WifiSignal arg0)
+	{
+		return arg0.leveldBm - leveldBm;
+	}
 
 	/**
 	 * @return the freqMhz
 	 */
-	public int getFreqMhz() {
+	public int getFreqMhz()
+	{
 		return freqMhz;
 	}
 
 	/**
-	 * @param freqMhz the freqMhz to set
+	 * @return the id
 	 */
-	public void setFreqMhz(int freqMhz) {
-		this.freqMhz = freqMhz;
+	public WifiId getId()
+	{
+		return id;
 	}
 
 	/**
 	 * @return the leveldBm
 	 */
-	public int getLeveldBm() {
+	public int getLeveldBm()
+	{
 		return leveldBm;
 	}
 
 	/**
-	 * @param leveldBm the leveldBm to set
+	 * @param freqMhz
+	 *            the freqMhz to set
 	 */
-	public void setLeveldBm(int leveldBm) {
-		this.leveldBm = leveldBm;
+	public void setFreqMhz(int freqMhz)
+	{
+		this.freqMhz = freqMhz;
 	}
-
-
-	@Override
-	public int compareTo(WifiSignal arg0) {
-		return  arg0.leveldBm - leveldBm;
-	}
-
 
 	/**
-	 * @return the id
+	 * @param id
+	 *            the id to set
 	 */
-	public WifiId getId() {
-		return id;
-	}
-
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(WifiId id) {
+	public void setId(WifiId id)
+	{
 		this.id = id;
+	}
+
+	/**
+	 * @param leveldBm
+	 *            the leveldBm to set
+	 */
+	public void setLeveldBm(int leveldBm)
+	{
+		this.leveldBm = leveldBm;
 	}
 }

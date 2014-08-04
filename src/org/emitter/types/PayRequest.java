@@ -1,9 +1,11 @@
 package org.emitter.types;
 
-public class PayRequest {
+public class PayRequest
+{
 
-	public PayRequest() {
-		
+	public PayRequest()
+	{
+
 	}
 
 }

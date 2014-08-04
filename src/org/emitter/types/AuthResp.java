@@ -1,39 +1,54 @@
 package org.emitter.types;
 
-public class AuthResp {
-	private String token;
-	private boolean fail;
-	private String failReason;
-	public AuthResp() {
-		
+public class AuthResp
+{
+	private boolean	fail;
+	private String	failReason;
+	private String	token;
+
+	public AuthResp()
+	{
+
 	}
+
+	public String getFailReason()
+	{
+		return failReason;
+	}
+
 	/**
 	 * @return the token
 	 */
-	public String getToken() {
+	public String getToken()
+	{
 		return token;
 	}
-	
-	/**
-	 * @param token the token to set
-	 */
-	public void setToken(String token) {
-		this.token = token;
-	}
+
 	/**
 	 * @return the userKey
 	 */
-	public boolean isFail() {
+	public boolean isFail()
+	{
 		return fail;
 	}
-	public void setFail(boolean fail) {
+
+	public void setFail(boolean fail)
+	{
 		this.fail = fail;
 	}
-	public String getFailReason() {
-		return failReason;
-	}
-	public void setFailReason(String failReason) {
+
+	public void setFailReason(String failReason)
+	{
 		this.failReason = failReason;
 	}
-	
+
+	/**
+	 * @param token
+	 *            the token to set
+	 */
+	public void setToken(String token)
+	{
+		this.token = token;
+	}
+
 }

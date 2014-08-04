@@ -1,90 +1,124 @@
 package org.emitter.types;
 
+/**
+ * @author jeremy
+ *
+ */
 public class HashRate
 {
+	/**
+	 * @author jeremy
+	 *
+	 */
 	public enum Unit
 	{
-		MHS,
-		KHS,
-		GHS
+		/**
+		 *  Giga-hashes/second
+		 */
+		GHS, 
+		
+		/**
+		 *  Mega-hashes/second
+		 */
+		MHS, 
+		
+		/**
+		 *  Kilo-hashes/second
+		 */
+		KHS
 	}
-	
-	private float rate;
-	private float acceptedRate;
-	private boolean accepted;
-	private Unit unit;
-	private Timestamp time;
+
+	private boolean		accepted;
+	private float		rate;
+	private Timestamp	time;
+	private Unit		unit;
+
+	/**
+	 * 
+	 */
 	public HashRate()
 	{
-		
+
 	}
-	
+
 	/**
 	 * @param rate
-	 * @param timestamp
-	 * @param unit
-	 * @param deviceName
+	 * @param unit the Unit of measurement
+	 * @param time Time this rate was achieved
 	 */
-	public HashRate(float rate,  Unit unit, Timestamp time) {
+	public HashRate(float rate, Unit unit, Timestamp time)
+	{
 		super();
 		this.rate = rate;
 		this.unit = unit;
 		this.time = time;
 	}
+
+
 	/**
 	 * @return the rate
 	 */
-	public float getRate() {
+	public float getRate()
+	{
 		return rate;
 	}
-	/**
-	 * @param rate the rate to set
-	 */
-	public void setRate(float rate) {
-		this.rate = rate;
-	}
-	
-	/**
-	 * @return the unit
-	 */
-	public Unit getUnit() {
-		return unit;
-	}
-	/**
-	 * @param unit the unit to set
-	 */
-	public void setUnit(Unit unit) {
-		this.unit = unit;
-	}
-	
 
 	/**
 	 * @return the time
 	 */
-	public Timestamp getTime() {
+	public Timestamp getTime()
+	{
 		return time;
 	}
 
 	/**
-	 * @param time the time to set
+	 * @return the unit
 	 */
-	public void setTime(Timestamp time) {
-		this.time = time;
+	public Unit getUnit()
+	{
+		return unit;
 	}
 
-	public float getAcceptedRate() {
-		return acceptedRate;
-	}
-
-	public void setAcceptedRate(float acceptedRate) {
-		this.acceptedRate = acceptedRate;
-	}
-
-	public boolean isAccepted() {
+	/**
+	 * @return if the work was accepted by the network
+	 */
+	public boolean isAccepted()
+	{
 		return accepted;
 	}
 
-	public void setAccepted(boolean accepted) {
+	/**
+	 * @param accepted
+	 */
+	public void setAccepted(boolean accepted)
+	{
 		this.accepted = accepted;
+	}
+
+	/**
+	 * @param rate the rate to set
+	 *            
+	 */
+	public void setRate(float rate)
+	{
+		this.rate = rate;
+	}
+
+	/**
+	 * @param time  the time to set
+	 *           
+	 */
+	public void setTime(Timestamp time)
+	{
+		this.time = time;
+	}
+
+	/**
+	 * @param unit the unit of measurement to set
+	 *            
+	 */
+	public void setUnit(Unit unit)
+	{
+		this.unit = unit;
 	}
 }

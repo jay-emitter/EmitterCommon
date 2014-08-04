@@ -7,27 +7,41 @@ import java.util.Arrays;
 
 /**
  * @author jeremy
- *
+ * 
  */
-public class Menu 
+public class Menu
 {
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
+	private MenuBlock[]	blocks;
+	private MenuId		id;
+
+	/**
+	 * 
 	 */
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + Arrays.hashCode(blocks);
-		result = prime * result + id.hashCode();
-		return result;
+	public Menu()
+	{
+		super();
 	}
-	/* (non-Javadoc)
+
+	/**
+	 * @param blocks
+	 * @param menuId
+	 */
+	public Menu(MenuBlock[] blocks, int menuId)
+	{
+		super();
+		this.blocks = blocks;
+		this.id = new MenuId();
+		id.setMenuId(menuId);
+	}
+
+	/*
+	 * (non-Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj)
+	{
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -41,52 +55,53 @@ public class Menu
 			return false;
 		return true;
 	}
-	
+
 	/**
 	 * @return the blocks
 	 */
-	public MenuBlock[] getBlocks() {
+	public MenuBlock[] getBlocks()
+	{
 		return blocks;
 	}
-	/**
-	 * @param blocks the blocks to set
-	 */
-	public void setBlocks(MenuBlock[] blocks) {
-		this.blocks = blocks;
-	}
-	
+
 	/**
 	 * @return the id
 	 */
-	public MenuId getId() {
+	public MenuId getId()
+	{
 		return id;
 	}
-	/**
-	 * @param id the id to set
+
+	/*
+	 * (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
 	 */
-	public void setId(MenuId id) {
-		this.id = id;
+	@Override
+	public int hashCode()
+	{
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(blocks);
+		result = prime * result + id.hashCode();
+		return result;
 	}
-	
-	/**
-	 * 
-	 */
-	public Menu() {
-		super();
-	}
-	
+
 	/**
 	 * @param blocks
-	 * @param menuId
+	 *            the blocks to set
 	 */
-	public Menu(MenuBlock[] blocks, int menuId) {
-		super();
+	public void setBlocks(MenuBlock[] blocks)
+	{
 		this.blocks = blocks;
-		this.id = new MenuId();
-		id.setMenuId(menuId);
 	}
-	private MenuBlock[] blocks;
-	private MenuId id;
 
-	
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(MenuId id)
+	{
+		this.id = id;
+	}
+
 }
