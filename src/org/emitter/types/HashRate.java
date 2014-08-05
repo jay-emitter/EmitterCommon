@@ -28,10 +28,10 @@ public class HashRate
 		KHS
 	}
 
-	private boolean		accepted;
-	private float		rate;
-	private Timestamp	time;
-	private Unit		unit;
+	Since(1.0) Since(1.0) private boolean		accepted;
+	Since(1.0) Since(1.0) private float		rate;
+	Since(1.0) Since(1.0) private Timestamp	time;
+	Since(1.0) Since(1.0) private Unit		unit;
 
 	/**
 	 * 

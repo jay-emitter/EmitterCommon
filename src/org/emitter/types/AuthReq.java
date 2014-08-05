@@ -2,7 +2,7 @@ package org.emitter.types;
 
 public class AuthReq
 {
-	private String	username, password;
+	Since(1.0) Since(1.0) private String	username, password;
 
 	public AuthReq()
 	{

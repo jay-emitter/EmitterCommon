@@ -7,13 +7,13 @@ public class EmitResp
 		ACCEPTED
 	}
 
-	private Location	location;
-	private Message[]	message;
-	private Status		status;
+	Since(1.0) Since(1.0) private Location	location;
+	Since(1.0) Since(1.0) private Message[]	message;
+	Since(1.0) Since(1.0) private Status		status;
 	/**
 	 * 
 	 */
-	private String		token;
+	Since(1.0) Since(1.0) private String		token;
 
 	/**
 	 * 

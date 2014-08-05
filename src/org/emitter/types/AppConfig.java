@@ -6,7 +6,7 @@ package org.emitter.types;
  */
 public class AppConfig
 {
-	private boolean acceptsMessages;
+	Since(1.0) Since(1.0) private boolean acceptsMessages;
 	
 	/**
 	 * 

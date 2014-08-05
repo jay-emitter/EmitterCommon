@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class EmitReq
 {
-	private GPSCoord		gps;
-	private Log				log;
-	private Source			source;
-	private Timestamp		time;
-	private String			token;
-	private WifiSignal[]	wifi;
+	Since(1.0) Since(1.0) private GPSCoord		gps;
+	Since(1.0) Since(1.0) private Log				log;
+	Since(1.0) Since(1.0) private Source			source;
+	Since(1.0) Since(1.0) private Timestamp		time;
+	Since(1.0) Since(1.0) private String			token;
+	Since(1.0) Since(1.0) private WifiSignal[]	wifi;
 
 	/**
 	 * 

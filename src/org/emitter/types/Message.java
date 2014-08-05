@@ -2,10 +2,10 @@ package org.emitter.types;
 
 public class Message
 {
-	private int		msgId;
-	private String	text;
+	Since(1.0) Since(1.0) private int		msgId;
+	Since(1.0) Since(1.0) private String	text;
 
-	private String	title;
+	Since(1.0) Since(1.0) private String	title;
 
 	public Message()
 	{

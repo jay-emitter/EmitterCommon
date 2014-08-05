@@ -2,7 +2,7 @@ package org.emitter.types;
 
 public class GPSCoord
 {
-	private double	longitude, latitude, altitude;
+	Since(1.0) Since(1.0) private double	longitude, latitude, altitude;
 
 	public GPSCoord()
 	{

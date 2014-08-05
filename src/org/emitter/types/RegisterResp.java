@@ -2,10 +2,10 @@ package org.emitter.types;
 
 public class RegisterResp
 {
-	private String	failReson;
-	private Source	source;
+	Since(1.0) Since(1.0) private String	failReson;
+	Since(1.0) Since(1.0) private Source	source;
 	boolean			Success;
-	private String	token;
+	Since(1.0) Since(1.0) private String	token;
 
 	public RegisterResp()
 	{

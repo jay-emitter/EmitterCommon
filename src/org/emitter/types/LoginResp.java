@@ -2,9 +2,9 @@ package org.emitter.types;
 
 public class LoginResp
 {
-	private String	errorMsg;
-	private Source	source;
-	private String	token;
+	Since(1.0) Since(1.0) private String	errorMsg;
+	Since(1.0) Since(1.0) private Source	source;
+	Since(1.0) Since(1.0) private String	token;
 
 	public LoginResp()
 	{

@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Timestamp
 {
-	private long	stamp;
+	Since(1.0) Since(1.0) private long	stamp;
 
 	public Timestamp()
 	{

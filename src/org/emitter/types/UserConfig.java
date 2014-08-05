@@ -3,18 +3,20 @@
  */
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
 /**
  * @author jeremy
  *
  */
 public class UserConfig
 {
-	private String email;
+	@Since(1.0) Since(1.0) Since(1.0) private String email;
 	
-	private String address1;
-	private String addressAppt;
+	Since(1.0) Since(1.0) private String address1;
+	Since(1.0) Since(1.0) private String addressAppt;
 	
-	private String zipPostal;
+	Since(1.0) Since(1.0) private String zipPostal;
 	
 	/**
 	 * 

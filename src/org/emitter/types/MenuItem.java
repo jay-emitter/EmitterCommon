@@ -11,9 +11,9 @@ import java.math.BigDecimal;
  */
 public class MenuItem
 {
-	private boolean		allowCusomization;
-	private String		name;
-	private BigDecimal	price;
+	Since(1.0) Since(1.0) private boolean		allowCusomization;
+	Since(1.0) Since(1.0) private String		name;
+	Since(1.0) Since(1.0) private BigDecimal	price;
 
 	/**
 	 * 

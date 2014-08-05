@@ -2,9 +2,9 @@ package org.emitter.types;
 
 public class AuthResp
 {
-	private boolean	fail;
-	private String	failReason;
-	private String	token;
+	Since(1.0) Since(1.0) private boolean	fail;
+	Since(1.0) Since(1.0) private String	failReason;
+	Since(1.0) Since(1.0) private String	token;
 
 	public AuthResp()
 	{
