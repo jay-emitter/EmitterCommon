@@ -2,6 +2,8 @@ package org.emitter.types;
 
 import java.util.Date;
 
+import com.google.gson.annotations.Since;
+
 public class Timestamp
 {
 	@Since(1.0) private long	stamp;

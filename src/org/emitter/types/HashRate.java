@@ -1,31 +1,33 @@
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
 /**
  * @author jeremy
- *
+ * 
  */
 public class HashRate
 {
 	/**
 	 * @author jeremy
-	 *
+	 * 
 	 */
 	public enum Unit
 	{
 		/**
-		 *  Giga-hashes/second
+		 * Giga-hashes/second
 		 */
-		GHS, 
-		
+		GHS,
+
 		/**
-		 *  Mega-hashes/second
+		 * Kilo-hashes/second
 		 */
-		MHS, 
-		
+		KHS,
+
 		/**
-		 *  Kilo-hashes/second
+		 * Mega-hashes/second
 		 */
-		KHS
+		MHS
 	}
 
 	@Since(1.0) private boolean		accepted;
@@ -43,8 +45,10 @@ public class HashRate
 
 	/**
 	 * @param rate
-	 * @param unit the Unit of measurement
-	 * @param time Time this rate was achieved
+	 * @param unit
+	 *            the Unit of measurement
+	 * @param time
+	 *            Time this rate was achieved
 	 */
 	public HashRate(float rate, Unit unit, Timestamp time)
 	{
@@ -53,7 +57,6 @@ public class HashRate
 		this.unit = unit;
 		this.time = time;
 	}
-
 
 	/**
 	 * @return the rate
@@ -96,8 +99,9 @@ public class HashRate
 	}
 
 	/**
-	 * @param rate the rate to set
-	 *            
+	 * @param rate
+	 *            the rate to set
+	 * 
 	 */
 	public void setRate(float rate)
 	{
@@ -105,8 +109,9 @@ public class HashRate
 	}
 
 	/**
-	 * @param time  the time to set
-	 *           
+	 * @param time
+	 *            the time to set
+	 * 
 	 */
 	public void setTime(Timestamp time)
 	{
@@ -114,8 +119,9 @@ public class HashRate
 	}
 
 	/**
-	 * @param unit the unit of measurement to set
-	 *            
+	 * @param unit
+	 *            the unit of measurement to set
+	 * 
 	 */
 	public void setUnit(Unit unit)
 	{

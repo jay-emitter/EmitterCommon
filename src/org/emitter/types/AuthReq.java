@@ -4,11 +4,12 @@ import com.google.gson.annotations.Since;
 
 /**
  * @author jeremy
- *
+ * 
  */
 public class AuthReq
 {
-	@Since(1.0) private String	username, password;
+	@Since(1.0) private String	username;
+	@Since(1.0) private String password;
 
 	/**
 	 * 
@@ -18,6 +19,10 @@ public class AuthReq
 
 	}
 
+	/**
+	 * @param user
+	 * @param pass
+	 */
 	public AuthReq(String user, String pass)
 	{
 		username = user;

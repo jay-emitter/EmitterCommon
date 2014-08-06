@@ -1,10 +1,12 @@
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
 public class RegisterResp
 {
 	@Since(1.0) private String	failReson;
 	@Since(1.0) private Source	source;
-	boolean			Success;
+	boolean						Success;
 	@Since(1.0) private String	token;
 
 	public RegisterResp()

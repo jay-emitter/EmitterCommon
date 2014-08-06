@@ -1,5 +1,7 @@
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
 public class GPSCoord
 {
 	@Since(1.0) private double	longitude, latitude, altitude;

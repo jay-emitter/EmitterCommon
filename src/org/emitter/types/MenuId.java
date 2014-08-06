@@ -1,5 +1,7 @@
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
 public class MenuId
 {
 	@Since(1.0) private int	menuId;

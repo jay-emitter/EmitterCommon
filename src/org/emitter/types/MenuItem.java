@@ -5,6 +5,8 @@ package org.emitter.types;
 
 import java.math.BigDecimal;
 
+import com.google.gson.annotations.Since;
+
 /**
  * @author jeremy
  * 

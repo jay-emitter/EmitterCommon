@@ -4,7 +4,7 @@ import com.google.gson.annotations.Since;
 
 /**
  * @author jeremy
- *
+ * 
  */
 public class AuthResp
 {

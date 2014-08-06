@@ -3,6 +3,8 @@
  */
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
 /**
  * @author jeremy
  * 
@@ -10,8 +12,8 @@ package org.emitter.types;
 public class Source
 {
 
-	@Since(1.0) private String	deviceKey;
 	@Since(1.0) private String	appKey;
+	@Since(1.0) private String	deviceKey;
 	@Since(1.0) private String	userKey;
 
 	/**
@@ -74,19 +76,19 @@ public class Source
 	}
 
 	/**
-	 * @return the deviceKey
-	 */
-	public String getDeviceKey()
-	{
-		return deviceKey;
-	}
-
-	/**
 	 * @return the appKey
 	 */
 	public String getAppKey()
 	{
 		return appKey;
+	}
+
+	/**
+	 * @return the deviceKey
+	 */
+	public String getDeviceKey()
+	{
+		return deviceKey;
 	}
 
 	/**
@@ -96,34 +98,6 @@ public class Source
 	{
 		return userKey;
 	}
-	
-	/**
-	 * @param _deviceKey
-	 *            the deviceKey to set
-	 */
-	public void setDeviceKey(String _deviceKey)
-	{
-		deviceKey = _deviceKey;
-	}
-
-	/**
-	 * @param _appKey the appKey to set
-	 *            
-	 */
-	public void setAppKey(String _appKey)
-	{
-		appKey = _appKey;
-	}
-
-	/**
-	 * @param _userKey  the userKey to set
-	 *          
-	 */
-	public void setUserKey(String _userKey)
-	{
-		userKey = _userKey;
-	}
-
 
 	/*
 	 * (non-Javadoc)
@@ -136,11 +110,38 @@ public class Source
 		int result = 1;
 		result = prime * result
 				+ ((deviceKey == null) ? 0 : deviceKey.hashCode());
-		result = prime * result
-				+ ((appKey == null) ? 0 : appKey.hashCode());
+		result = prime * result + ((appKey == null) ? 0 : appKey.hashCode());
 		result = prime * result + ((userKey == null) ? 0 : userKey.hashCode());
 		return result;
 	}
 
-	
+	/**
+	 * @param _appKey
+	 *            the appKey to set
+	 * 
+	 */
+	public void setAppKey(String _appKey)
+	{
+		appKey = _appKey;
+	}
+
+	/**
+	 * @param _deviceKey
+	 *            the deviceKey to set
+	 */
+	public void setDeviceKey(String _deviceKey)
+	{
+		deviceKey = _deviceKey;
+	}
+
+	/**
+	 * @param _userKey
+	 *            the userKey to set
+	 * 
+	 */
+	public void setUserKey(String _userKey)
+	{
+		userKey = _userKey;
+	}
+
 }

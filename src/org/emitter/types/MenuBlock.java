@@ -2,6 +2,8 @@ package org.emitter.types;
 
 import java.util.Arrays;
 
+import com.google.gson.annotations.Since;
+
 public class MenuBlock
 {
 	@Since(1.0) private String		header;

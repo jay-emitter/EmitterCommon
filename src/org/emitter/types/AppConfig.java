@@ -4,12 +4,12 @@ import com.google.gson.annotations.Since;
 
 /**
  * @author jeremy
- *
+ * 
  */
 public class AppConfig
 {
-	@Since(1.0) private boolean acceptsMessages;
-	
+	@Since(1.0) private boolean	acceptsMessages;
+
 	/**
 	 * 
 	 */
@@ -27,7 +27,8 @@ public class AppConfig
 	}
 
 	/**
-	 * @param acceptsMessages the acceptsMessages to set
+	 * @param acceptsMessages
+	 *            the acceptsMessages to set
 	 */
 	public void setAcceptsMessages(boolean acceptsMessages)
 	{

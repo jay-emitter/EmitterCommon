@@ -1,5 +1,7 @@
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
 public class Message
 {
 	@Since(1.0) private int		msgId;

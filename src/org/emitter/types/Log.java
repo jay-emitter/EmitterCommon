@@ -1,5 +1,7 @@
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
 public class Log
 {
 	@Since(1.0) private String[]	lines;

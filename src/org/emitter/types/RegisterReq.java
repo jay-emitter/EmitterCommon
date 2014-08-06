@@ -1,23 +1,33 @@
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
 /**
  * @author jeremy
- *
+ * 
  */
 public class RegisterReq
 {
-	@Since(1.0) private String	appName;
-	@Since(1.0) private String	device;
-	@Since(1.0) private Source	source;
-	@Since(1.0) private AuthReq	user;
-	@Since(1.0) private AppConfig appConfig;
-	
+	@Since(1.0) private AppConfig	appConfig;
+	@Since(1.0) private String		appName;
+	@Since(1.0) private String		device;
+	@Since(1.0) private Source		source;
+	@Since(1.0) private AuthReq		user;
+
 	/**
 	 * 
 	 */
 	public RegisterReq()
 	{
 
+	}
+
+	/**
+	 * @return the appConfig
+	 */
+	public AppConfig getAppConfig()
+	{
+		return appConfig;
 	}
 
 	/**
@@ -50,6 +60,15 @@ public class RegisterReq
 	public AuthReq getUser()
 	{
 		return user;
+	}
+
+	/**
+	 * @param appConfig
+	 *            the appConfig to set
+	 */
+	public void setAppConfig(AppConfig appConfig)
+	{
+		this.appConfig = appConfig;
 	}
 
 	/**
@@ -86,22 +105,6 @@ public class RegisterReq
 	public void setUser(AuthReq user)
 	{
 		this.user = user;
-	}
-
-	/**
-	 * @return the appConfig
-	 */
-	public AppConfig getAppConfig()
-	{
-		return appConfig;
-	}
-
-	/**
-	 * @param appConfig the appConfig to set
-	 */
-	public void setAppConfig(AppConfig appConfig)
-	{
-		this.appConfig = appConfig;
 	}
 
 }
