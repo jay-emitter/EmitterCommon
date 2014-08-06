@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 import com.google.gson.annotations.Since;
 
+/**
+ * @author jeremy
+ * 
+ */
 public class EmitReq
 {
 	@Since(1.0) private GPSCoord		gps;

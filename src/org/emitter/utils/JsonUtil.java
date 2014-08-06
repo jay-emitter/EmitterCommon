@@ -19,7 +19,17 @@ public class JsonUtil
 {
 	static GsonBuilder	g		= null;
 	static Gson			gson	= null;
-
+	static double 		version = 1.0;
+	
+	private static Gson get()
+	{
+		if (gson == null)
+		{
+			build();
+		}
+		return gson;
+	}
+	
 	private static synchronized void build()
 	{
 		if (gson == null)
@@ -28,10 +38,28 @@ public class JsonUtil
 			{
 				g = new GsonBuilder();
 			}
-			gson = g.create();
+			gson = g.serializeNulls().setVersion(version).create();
+		}
+	}
+	
+	/**
+	 * @param d the version number of the serialization version to use (will serialize all version < d)
+	 */
+	public static synchronized void setVersion(double d)
+	{
+		if(Double.compare(version, d) != 0)
+		{
+			g = null;
+			gson = null;
+			version = d;
 		}
 	}
 
+	/**
+	 * @param r
+	 * @return An object of Type T
+	 * @throws EmitterException
+	 */
 	public static <T> T from(Reader r) throws EmitterException
 	{
 		try
@@ -46,6 +74,11 @@ public class JsonUtil
 		}
 	}
 
+	/**
+	 * @param j
+	 * @return An object of type T
+	 * @throws EmitterException
+	 */
 	public static <T> T from(String j) throws EmitterException
 	{
 		try
@@ -60,15 +93,11 @@ public class JsonUtil
 		}
 	}
 
-	private static Gson get()
-	{
-		if (gson == null)
-		{
-			build();
-		}
-		return gson;
-	}
-
+	/**
+	 * @param ob
+	 * @return The json representation of object ob
+	 * @throws EmitterException
+	 */
 	public static <T> String to(T ob) throws EmitterException
 	{
 		try
@@ -83,6 +112,11 @@ public class JsonUtil
 		}
 	}
 
+	/**
+	 * @param ob
+	 * @param w The writer where the json representation of object ob will be written
+	 * @throws EmitterException
+	 */
 	public static <T> void to(T ob, Writer w) throws EmitterException
 	{
 		try
