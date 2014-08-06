@@ -12,8 +12,8 @@ import java.util.Arrays;
 public class Menu
 {
 
-	Since(1.0) Since(1.0) private MenuBlock[]	blocks;
-	Since(1.0) Since(1.0) private MenuId		id;
+	@Since(1.0) private MenuBlock[]	blocks;
+	@Since(1.0) private MenuId		id;
 
 	/**
 	 * 

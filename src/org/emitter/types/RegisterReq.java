@@ -6,11 +6,11 @@ package org.emitter.types;
  */
 public class RegisterReq
 {
-	Since(1.0) Since(1.0) private String	appName;
-	Since(1.0) Since(1.0) private String	device;
-	Since(1.0) Since(1.0) private Source	source;
-	Since(1.0) Since(1.0) private AuthReq	user;
-	Since(1.0) Since(1.0) private AppConfig appConfig;
+	@Since(1.0) private String	appName;
+	@Since(1.0) private String	device;
+	@Since(1.0) private Source	source;
+	@Since(1.0) private AuthReq	user;
+	@Since(1.0) private AppConfig appConfig;
 	
 	/**
 	 * 

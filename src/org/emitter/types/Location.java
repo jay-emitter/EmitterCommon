@@ -2,9 +2,9 @@ package org.emitter.types;
 
 public class Location
 {
-	Since(1.0) Since(1.0) private String	locId;
-	Since(1.0) Since(1.0) private int		MenuId;
-	Since(1.0) Since(1.0) private String	name;
+	@Since(1.0) private String	locId;
+	@Since(1.0) private int		MenuId;
+	@Since(1.0) private String	name;
 
 	public Location()
 	{

@@ -1,12 +1,14 @@
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
 /**
  * @author jeremy
  *
  */
 public class AppConfig
 {
-	Since(1.0) Since(1.0) private boolean acceptsMessages;
+	@Since(1.0) private boolean acceptsMessages;
 	
 	/**
 	 * 

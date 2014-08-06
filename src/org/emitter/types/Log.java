@@ -2,8 +2,8 @@ package org.emitter.types;
 
 public class Log
 {
-	Since(1.0) Since(1.0) private String[]	lines;
-	Since(1.0) Since(1.0) private String		programName;
+	@Since(1.0) private String[]	lines;
+	@Since(1.0) private String		programName;
 
 	public Log()
 	{

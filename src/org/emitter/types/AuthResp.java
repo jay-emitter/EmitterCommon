@@ -1,10 +1,16 @@
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
+/**
+ * @author jeremy
+ *
+ */
 public class AuthResp
 {
-	Since(1.0) Since(1.0) private boolean	fail;
-	Since(1.0) Since(1.0) private String	failReason;
-	Since(1.0) Since(1.0) private String	token;
+	@Since(1.0) private boolean	fail;
+	@Since(1.0) private String	failReason;
+	@Since(1.0) private String	token;
 
 	public AuthResp()
 	{

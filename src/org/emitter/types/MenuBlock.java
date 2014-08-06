@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class MenuBlock
 {
-	Since(1.0) Since(1.0) private String		header;
-	Since(1.0) Since(1.0) private MenuItem	items[];
-	Since(1.0) Since(1.0) private MenuBlock	subBlocks[];
+	@Since(1.0) private String		header;
+	@Since(1.0) private MenuItem	items[];
+	@Since(1.0) private MenuBlock	subBlocks[];
 
 	public MenuBlock()
 	{

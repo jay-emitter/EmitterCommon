@@ -10,9 +10,9 @@ package org.emitter.types;
 public class Source
 {
 
-	Since(1.0) Since(1.0) private String	deviceKey;
-	Since(1.0) Since(1.0) private String	appKey;
-	Since(1.0) Since(1.0) private String	userKey;
+	@Since(1.0) private String	deviceKey;
+	@Since(1.0) private String	appKey;
+	@Since(1.0) private String	userKey;
 
 	/**
 	 * 

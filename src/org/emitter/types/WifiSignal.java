@@ -2,9 +2,9 @@ package org.emitter.types;
 
 public class WifiSignal implements Comparable<WifiSignal>
 {
-	Since(1.0) Since(1.0) private int		freqMhz;
-	Since(1.0) Since(1.0) private WifiId	id;
-	Since(1.0) Since(1.0) private int		leveldBm;
+	@Since(1.0) private int		freqMhz;
+	@Since(1.0) private WifiId	id;
+	@Since(1.0) private int		leveldBm;
 
 	/**
 	 * 

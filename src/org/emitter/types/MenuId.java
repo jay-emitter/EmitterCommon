@@ -2,7 +2,7 @@ package org.emitter.types;
 
 public class MenuId
 {
-	Since(1.0) Since(1.0) private int	menuId;
+	@Since(1.0) private int	menuId;
 
 	public MenuId()
 	{

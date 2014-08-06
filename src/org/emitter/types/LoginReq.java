@@ -2,9 +2,9 @@ package org.emitter.types;
 
 public class LoginReq
 {
-	Since(1.0) Since(1.0) private AuthReq	auth;
-	Since(1.0) Since(1.0) private String	deviceName;
-	Since(1.0) Since(1.0) private Source	source;
+	@Since(1.0) private AuthReq	auth;
+	@Since(1.0) private String	deviceName;
+	@Since(1.0) private Source	source;
 
 	public LoginReq()
 	{

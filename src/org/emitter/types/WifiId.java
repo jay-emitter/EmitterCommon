@@ -2,7 +2,7 @@ package org.emitter.types;
 
 public class WifiId
 {
-	Since(1.0) Since(1.0) private String	BSSID, SSID;
+	@Since(1.0) private String	BSSID, SSID;
 
 	/**
 	 * 

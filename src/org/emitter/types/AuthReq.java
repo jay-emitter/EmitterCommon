@@ -1,9 +1,18 @@
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
+/**
+ * @author jeremy
+ *
+ */
 public class AuthReq
 {
-	Since(1.0) Since(1.0) private String	username, password;
+	@Since(1.0) private String	username, password;
 
+	/**
+	 * 
+	 */
 	public AuthReq()
 	{
 

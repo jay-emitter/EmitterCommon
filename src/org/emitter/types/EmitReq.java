@@ -2,14 +2,16 @@ package org.emitter.types;
 
 import java.util.Arrays;
 
+import com.google.gson.annotations.Since;
+
 public class EmitReq
 {
-	Since(1.0) Since(1.0) private GPSCoord		gps;
-	Since(1.0) Since(1.0) private Log				log;
-	Since(1.0) Since(1.0) private Source			source;
-	Since(1.0) Since(1.0) private Timestamp		time;
-	Since(1.0) Since(1.0) private String			token;
-	Since(1.0) Since(1.0) private WifiSignal[]	wifi;
+	@Since(1.0) private GPSCoord		gps;
+	@Since(1.0) private Log				log;
+	@Since(1.0) private Source			source;
+	@Since(1.0) private Timestamp		time;
+	@Since(1.0) private String			token;
+	@Since(1.0) private WifiSignal[]	wifi;
 
 	/**
 	 * 

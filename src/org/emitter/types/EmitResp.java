@@ -1,5 +1,7 @@
 package org.emitter.types;
 
+import com.google.gson.annotations.Since;
+
 public class EmitResp
 {
 	public enum Status
@@ -7,13 +9,13 @@ public class EmitResp
 		ACCEPTED
 	}
 
-	Since(1.0) Since(1.0) private Location	location;
-	Since(1.0) Since(1.0) private Message[]	message;
-	Since(1.0) Since(1.0) private Status		status;
+	@Since(1.0) private Location	location;
+	@Since(1.0) private Message[]	message;
+	@Since(1.0) private Status		status;
 	/**
 	 * 
 	 */
-	Since(1.0) Since(1.0) private String		token;
+	@Since(1.0) private String		token;
 
 	/**
 	 * 
