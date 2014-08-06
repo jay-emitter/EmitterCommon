@@ -1,0 +1,117 @@
+package emitter.types
+
+class AppConfig
+	boolean acceptsMessages
+
+class AuthReq
+	String username
+	String password
+
+class AuthResp
+	boolean fail
+	String failReason
+	String token
+
+class EmitReq
+	GPSCoord gps
+	Log log
+	Source source
+	Timestamp time
+	String token
+	WifiSignal[] wifi
+
+class EmitResp
+	Location location
+	Message[] message
+	Status status
+	String token
+
+class GPSCoord
+	double longitude
+	double latitude
+	double altitude
+
+class HashRate
+	boolean accepted
+	float rate
+	Timestamp time
+	Unit unit
+
+class Location
+	String locId
+	int MenuId
+	String name
+
+class Log
+	String[] lines
+	String programName
+
+class LoginReq
+	AuthReq auth
+	String deviceName
+	Source source
+
+class LoginResp
+	String errorMsg
+	Source source
+	String token
+
+class Menu
+	MenuBlock[] blocks
+	MenuId id
+
+class MenuBlock
+	String header
+	MenuItem items[]
+	MenuBlock subBlocks[]
+
+class MenuId
+	int menuId
+
+class MenuItem
+	boolean allowCusomization
+	String name
+	BigDecimal price
+
+class Message
+	int msgId
+	String text
+	String title
+
+class PayRequest
+
+class RegisterReq
+	String appName
+	String device
+	Source source
+	AuthReq user
+	AppConfig appConfig
+
+class RegisterResp
+	String failReson
+	Source source
+	String token
+
+class Source
+	String deviceKey
+	String appKey
+	String userKey
+
+class Timestamp
+	long stamp
+
+class UserConfig
+	String email
+	String address1
+	String addressAppt
+	String zipPostal
+
+class WifiId
+	String BSSID
+	String SSID
+
+class WifiSignal
+	int freqMhz
+	WifiId id
+	int leveldBm
+

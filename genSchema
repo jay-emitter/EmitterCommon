@@ -1,0 +1,130 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use feature qw(switch say);
+use Data::Dumper;
+
+sub genCpp
+{
+	my $class = shift;
+	my $package = shift;
+	my $spec = shift;
+	my ($namespace_open, $namespace_close);
+	say "Gen c++ $class $package";	
+	open(my $fh, '>', "$class.hpp");
+	$namespace_open = "";
+	$namespace_close = "";
+	my @ns_parts = split('\.',$package); 
+	my $decl = "";
+	my $setter = "";
+	my $getter = "";
+	foreach(@ns_parts)
+	{
+		$namespace_open .= "namespace $_ {\n";
+		$namespace_close = "} /*namespace $_*/\n" . $namespace_close;
+	}
+	for my $field (keys %$spec)
+	{
+		my $type = $spec->{$field};
+		$decl .= "\t$type $field;\n";
+		$getter .= "
+	const $type & get$field() const 
+	{
+		return $field;
+	}";
+		$setter .= "
+	void set$field (const $type & _$field)
+	{
+		$field = _$field;
+	}";
+	}
+	select $fh;
+	say "#include <schema.hpp>";
+	say "$namespace_open
+class $class 
+{
+private:
+
+	//DECL
+$decl
+public:
+
+	//SETTERS
+$setter
+
+	//GETTERS
+$getter
+};
+$namespace_close";		
+	select STDOUT;
+	close ($fh);	
+}
+
+
+sub genJava
+{
+	my $class = shift;
+	my $package = shift;
+	my $spec = shift;
+	say "Gen Java $class $package";		
+	say Dumper($spec);	
+}
+
+sub gen
+{
+	my $fh = shift;
+	my $lang = shift;
+	my %spec;
+	my $package;
+	my $class;
+	foreach (<$fh>)
+	{
+		when(/^package /) { $package = (split(' ', $_))[1] }
+		when(/^class /) { $class = (split(' ', $_))[1] }
+		when(/^\t/) {
+ 			$_ =~ s/^\t//;
+			my ($type, $name) = split(' ', $_);
+			$spec{$class}{$name} = $type
+		 }	  
+	}
+	my $genFunc;
+	if($lang eq "java")
+	{
+		$genFunc = \&genJava;
+	}
+	elsif($lang eq "c++")
+	{
+		$genFunc = \&genCpp;
+	}
+	else
+	{
+		die("cannot use lang $lang");
+	}
+	my @classes = keys %spec;
+	foreach my $c (@classes)
+	{
+		&$genFunc($c, $package, $spec{$class});
+	}
+}
+
+
+
+my @files;
+my $lang;
+foreach(@ARGV)
+{
+	when(/--lang=/) { $lang = (split('=',$_))[1]; }
+	default {push(@files,$_); }	
+}
+
+die("no files") if (!@files);
+die("no language") if (!$lang);
+
+foreach(@files)
+{
+	say "Parsing $_";
+	open(my $fh, '<', $_);	
+	gen($fh, $lang);
+	close($fh);	
+}
