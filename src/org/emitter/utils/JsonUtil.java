@@ -62,7 +62,11 @@ public class JsonUtil
 	 */
 	public static synchronized void setVersion(double d) throws EmitterException
 	{
-		if(shouldSetVersion() && Double.compare(LATEST_VERSION, d) > 1)
+		if(Double.compare(LATEST_VERSION, d) < 0)
+		{
+			throw new EmitterException("Invalid version number. LATEST_VERSION is " + d);
+		}
+		if(shouldSetVersion())
 		{
 			version = d;
 		}
@@ -99,8 +103,7 @@ public class JsonUtil
 	 */
 	public static <T> T from(String j, Class<T> cl) throws EmitterException
 	{	
-		StringReader reader = new StringReader(j);
-		return JsonUtil.<T>from(reader,cl);
+		return get().fromJson(j, cl);
 	}
 
 	/**
